@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Portafolio JIE</title>
+   <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  </head>
+<body>
+  <h1 id="titulo" class="text-center">Cambiar Color con JS
+  </h1>
+  <p id="parrafo-latin" class="text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
+    Dolorem vel totam at quam esse mollitia optio, unde blanditiis temporibus, <br>
+    minus doloribus, modi voluptates nostrum numquam suscipit ipsum vero
+    incidunt atque. <br> <br>
+  </p>
+    <div class="text-center">
+      <input id="pick-color"
+      type="text"
+      placeholder="Escoja el color"
+      value=""
+      class="text-center"> <br> <br>
+    </div>
+  <p class="text-center">
+    <a id="boton-color"
+      href="#"
+      class="btn btn-warning btn-lg">Click here
+    </a>
+  </p>
+  <!-- AQUI ESTA EL SCRIPT DE CAMBIO DE COLOR -->
+  <script>
+    document.getElementById("boton-color").addEventListener("click",
+    function(){
+      var colorescrito = document.getElementById("pick-color").value;
+      document.getElementById("parrafo-latin").style.color = colorescrito;
+    })
+  </script>
+</body>
