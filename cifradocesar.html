@@ -12,24 +12,36 @@
 <body>
   <h1 id="titulo2" class="text-center">Cifrado Cesar
   </h1>
-  <div class="row">
-    <input id="textoplano" class="col" type="text">
+  <div class="row" class="text-center">
+    <input id="textoplano"
+          class="col"
+          type="text"
+          placeholder="Ingrese el texto a cifrar"
+          value="">
     <div id="textocifrado" class="col">
     </div>
   </div>
   <br> <br>
   <div class="text-center">
     <a
-      id="calcular"
+      id="boton-cifrar"
       href="#"
       class="btn btn-success btn-lg">Cifrar
     </a>
   </div>
   <script>
+  document.getElementById("boton-cifrar").addEventListener("click",
+  function(){
+      var texto = document.getElementById("textoplano").value;
+      console.log (texto);
+      rot13
+   // })
     function rot13 (texto){
+      console.log (texto)
       var textoarray=texto.split("");
       var cifradoarray=[];
       var cifradotexto="";
+      console.log (textoarray)
       for(var i=0; i<textoarray.length;i++){
         if (textoarray[i]==" "){
           cifradoarray.push(" ")
@@ -86,11 +98,13 @@
         }else if (textoarray[i]== "Z"){
           cifradoarray.push("M")
         }else {cifradoarray.push("@")}
-        // console.log (textoarray[i]+" "+cifradoarray[i])
+        console.log (textoarray[i]+" "+cifradoarray[i])
         }
       cifradotexto = cifradoarray.join("")
       return cifradotexto
-      }
+  document.getElementById("textocifrado").innerHTML = cifradotexto
+    }
+ })
   </script>
 
 </body>
