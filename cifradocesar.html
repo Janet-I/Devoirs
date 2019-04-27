@@ -32,9 +32,10 @@
   <script>
   document.getElementById("boton-cifrar").addEventListener("click",
   function(){
-      var texto = document.getElementById("textoplano").value;
-      console.log (texto);
-      rot13
+      var textoingresado = document.getElementById("textoplano").value;
+      console.log (textoingresado);
+      rot13 (textoingresado)
+      console.log(rot13);
    // })
     function rot13 (texto){
       console.log (texto)
@@ -101,10 +102,9 @@
         console.log (textoarray[i]+" "+cifradoarray[i])
         }
       cifradotexto = cifradoarray.join("")
-      return cifradotexto
-  document.getElementById("textocifrado").innerHTML = cifradotexto
+      document.getElementById("textocifrado").innerHTML = cifradotexto
+      // return cifradotexto
     }
  })
   </script>
-
 </body>
